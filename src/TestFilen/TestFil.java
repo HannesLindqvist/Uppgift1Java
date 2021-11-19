@@ -10,6 +10,7 @@ public class TestFil{
         TestTomLista(Sårt);
         TestNegativaTal(Sårt);
         TestMixadeTal(Sårt);
+        TestEttTal(Sårt);
     }
 
     private static void TestPositivaTal(Sorter Sårt) {
@@ -43,6 +44,15 @@ public class TestFil{
         int[] MixadLista = {-10, 50, 10000, -25, 1};
         int[] resultat = Sårt.sortering(MixadLista);
         int[] förväntat = {-25, -10, 1, 50, 10000};
+
+        if (Arrays.equals(resultat, förväntat)) {
+            System.out.println("Godkänt");
+        }
+    }
+    private static void TestEttTal(Sorter Sårt) {
+        int[] ListaEttTal = {0};
+        int[] resultat = Sårt.sortering(ListaEttTal);
+        int[] förväntat = {0};
 
         if (Arrays.equals(resultat, förväntat)) {
             System.out.println("Godkänt");

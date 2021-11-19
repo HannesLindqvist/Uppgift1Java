@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class TestFil{
     public static void main(String[] args) {
         Sorter Sårt = new Sorter();
@@ -12,12 +14,15 @@ public class TestFil{
             System.out.print(lista1[i] + ", ");
 
         }
-      
+        int[]förväntat={-4, 1, 2, 4, 5};
+        for(int i = 0; i < förväntat.length; i++){
 
-
-
-
-
+        }
+        if(Arrays.equals(resultat,förväntat)){
+            System.out.println("Godkänt");
+        }else {
+            System.out.println("Error:Fick" + Arrays.toString(resultat) + "Förväntademig:" + Arrays.toString(förväntat));
+        }
 
     }
 
